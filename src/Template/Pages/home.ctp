@@ -104,6 +104,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <p class="success">Server IP is <strong><?= $_SERVER['SERVER_ADDR']; ?></strong> (<?= $_SERVER['SERVER_SOFTWARE']; ?> on <strong><?= $_SERVER['SERVER_NAME']; ?></strong>)</p>
                 <p class="success">Current session id is <strong><?= session_id(); ?></strong> using the <strong><?= session_module_name(); ?></strong> session module.</p>
                 <p class="success">This is the <strong><?= $visits; ?></strong>th visit this session.</p>
+                <p class="success">You are <strong><?= $_SERVER['REMOTE_USER']; ?></strong>.</p>
             </div>
         </div>
         <div class="row">
