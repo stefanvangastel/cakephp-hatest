@@ -101,6 +101,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
         <div class="row">
             <div class="columns large-12 database checks">
+                <p class="success">Server IP is <strong><?= $_SERVER['SERVER_ADDR']; ?></strong> (<?= $_SERVER['SERVER_SOFTWARE']; ?> on <strong><?= $_SERVER['SERVER_NAME']; ?></strong>)</p>
+                <p class="success">Current session id is <strong><?= session_id(); ?></strong> using the <strong><?= session_module_name(); ?></strong> session module.</p>
+                <p class="success">This is the <strong><?= $visits; ?></strong>th visit this session.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns large-12 database checks">
                 <?php
                     try {
                         $connection = ConnectionManager::get('default');
