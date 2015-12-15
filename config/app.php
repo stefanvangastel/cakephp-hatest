@@ -3,10 +3,13 @@
 /**
  * LOAD .env file
  */
-$overwriteENV = true;
-$Loader = (new josegonzalez\Dotenv\Loader(__DIR__.DS.'config.env'))
+$configfile = __DIR__.DS.'config.env';
+if(file_exists($configfile)){
+	$overwriteENV = true;
+	$Loader = (new josegonzalez\Dotenv\Loader(__DIR__.DS.'config.env'))
               ->parse()
               ->toEnv($overwriteENV); // Throws LogicException if ->parse() is not called first
+}
 
 return [
     /**
